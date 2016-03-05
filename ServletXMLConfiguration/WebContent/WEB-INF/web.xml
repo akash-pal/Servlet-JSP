@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ServletXMLConfiguration</display-name>
+
+  <servlet>
+      <servlet-name>xmlServlet</servlet-name>
+      <servlet-class>org.akash.javabrains.XmlServlet</servlet-class>
+  
+      <!-- initialization parameter using web.xml 
+           can be also done using annotations    -->
+	  <init-param>
+	      <param-name>defaultUser</param-name>
+	      <param-value>AKASH PAL</param-value>
+	  </init-param>
+	  
+  </servlet>
+  
+  <servlet-mapping>
+      <servlet-name>xmlServlet</servlet-name>
+      <url-pattern>/xmlServletPath</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
